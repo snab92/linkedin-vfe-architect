@@ -21,7 +21,7 @@
                  │      │
     ┌────────────▼──┐  ┌▼──────────────────┐
     │  Tool 1: RAG  │  │  Tool 2: Search   │
-    │  FAISS +      │  │  DuckDuckGo       │
+    │  Chroma +     │  │  DuckDuckGo       │
     │  Embeddings   │  │  (tiempo real)    │
     └───────┬───────┘  └───────────────────┘
             │
