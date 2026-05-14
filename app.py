@@ -2,7 +2,7 @@
 LinkedIn VFE Architect — Agente Conversacional para Generación de Value Forward Emails.
 
 Arquitectura:
-    - RAG Engine: FAISS sobre documentos locales en data/knowledge/
+    - RAG Engine: Chroma sobre documentos locales en data/knowledge/
     - Web Search: DuckDuckGoSearchRun para noticias en tiempo real
     - LLM: Gemini 1.5 Flash vía langchain-google-genai
     - Agente: CONVERSATIONAL_REACT_DESCRIPTION con ConversationBufferMemory
@@ -35,11 +35,12 @@ st.set_page_config(
 # Imports que requieren la API key (cargados tras set_page_config)
 # ──────────────────────────────────────────────────────────────────────────────
 try:
-    from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_huggingface import HuggingFaceEmbeddings
     from langchain_community.vectorstores import Chroma
     from langchain_community.document_loaders import PyPDFLoader, TextLoader
     from langchain_community.tools import DuckDuckGoSearchRun
-    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
     from langchain.memory import ConversationBufferMemory
     from langchain.agents import initialize_agent, AgentType, Tool
     from langchain.chains import RetrievalQA
@@ -56,7 +57,7 @@ except ImportError as exc:
 KNOWLEDGE_DIR = Path("data/knowledge")
 CHUNK_SIZE = 1_000
 CHUNK_OVERLAP = 150
-GEMINI_MODEL = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 TONE_PROMPTS: dict[str, str] = {
     "Ejecutivo": (
@@ -134,7 +135,7 @@ def build_vectorstore(knowledge_dir: Path, api_key: str) -> Optional[Chroma]:
         api_key: Clave de la API de Google para generar embeddings.
 
     Returns:
-        Instancia de FAISS o None si no hay documentos.
+        Instancia de Chroma o None si no hay documentos.
     """
     if not knowledge_dir.exists():
         st.info(
@@ -158,20 +159,19 @@ def build_vectorstore(knowledge_dir: Path, api_key: str) -> Optional[Chroma]:
             chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP
         )
         chunks = splitter.split_documents(docs)
-        embeddings = GoogleGenerativeAIEmbeddings(
-            model="models/embedding-001",
-            google_api_key=api_key,
+        embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
         )
         vectorstore = Chroma.from_documents(chunks, embeddings)
         return vectorstore
     except Exception as exc:
-        st.error(f"❌ Error al construir el índice FAISS: {exc}")
+        st.error(f"❌ Error al construir el índice Chroma: {exc}")
         return None
 
 
 def build_agent(
     api_key: str,
-    vectorstore: Optional[FAISS],
+    vectorstore: Optional[Chroma],
     tone: str,
     memory: ConversationBufferMemory,
 ) -> object:
@@ -179,7 +179,7 @@ def build_agent(
 
     Args:
         api_key: Clave de la API de Google.
-        vectorstore: Índice FAISS con el conocimiento interno (puede ser None).
+        vectorstore: Índice Chroma con el conocimiento interno (puede ser None).
         tone: Nombre del tono de voz seleccionado por el usuario.
         memory: Objeto de memoria conversacional compartido.
 
