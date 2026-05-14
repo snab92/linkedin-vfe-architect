@@ -4,25 +4,15 @@
 # ─────────────────────────────────────────────
 
 # Core LangChain
-langchain>=0.2.0,<0.4.0
-langchain-core>=0.2.0,<0.4.0
-langchain-community>=0.2.0,<0.4.0
-
-# Google Gemini
-langchain-google-genai>=1.0.0,<3.0.0
+langchain==0.3.25
+langchain-core==0.3.59
+langchain-community==0.3.24
+langchain-google-genai==2.0.10
+langchain-huggingface==0.1.2
+langchain-text-splitters==0.3.8
 google-generativeai>=0.7.0
-
-# Vector store (CPU — compatible con Streamlit Cloud)
 chromadb>=0.4.0
-
-# Carga de documentos
 pypdf>=4.0.0
-
-# Búsqueda web
 duckduckgo-search>=6.0.0
-
-# Framework UI
 streamlit>=1.35.0
-
-# Utilidades
-tiktoken>=0.7.0
+sentence-transformers>=3.0.0
