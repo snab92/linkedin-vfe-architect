@@ -1,0 +1,81 @@
+# Mejores Prácticas de Outreach en LinkedIn
+# LinkedIn VFE Architect — Base de Conocimientos Interna
+
+## PSICOLOGÍA DEL PROSPECTO EN LINKEDIN
+
+Un decision maker en LinkedIn recibe en promedio 15–30 mensajes de outreach por semana.
+El 90% de esos mensajes son descartados en los primeros 5 segundos.
+
+Los únicos mensajes que se leen completos tienen al menos una de estas características:
+1. El prospecto reconoce su propio nombre de empresa o cargo en el primer párrafo.
+2. Hay una referencia a algo que pasó ESTA SEMANA (noticia, post, evento).
+3. El mensaje parece escrito específicamente para esa persona (porque lo está).
+
+---
+
+## ESTRATEGIA DE SECUENCIA VFE
+
+El VFE no es un mensaje aislado, es el paso 2 de una secuencia:
+
+Paso 1 — Conexión:
+Solicitar conexión con nota breve (sin pitch). Ejemplo: "Vi tu post sobre [tema]. Trabajo en [área similar]. Me gustaría conectar."
+
+Paso 2 — VFE (Value Forward Email):
+Enviado 2–3 días después de aceptar la conexión. Este es el mensaje principal.
+Regla: dar valor ANTES de pedir algo.
+
+Paso 3 — Follow-up (si no hay respuesta en 5–7 días):
+Mensaje corto: "¿Llegó mi mensaje anterior? Quería asegurarme." O mejor: compartir un recurso relevante nuevo.
+
+Paso 4 — Cierre o break-up message (si no hay respuesta al follow-up):
+"Entiendo que el timing puede no ser el ideal. Si en el futuro [problema que resuelves] se vuelve prioritario, estaré aquí."
+
+---
+
+## SEGMENTACIÓN POR CARGO
+
+Para C-Level (CEO, CFO, COO):
+- Habla de impacto en resultados financieros o estrategia corporativa.
+- Evita detalles técnicos; ve directo al business case.
+- El VFE debe caber en la pantalla de un celular sin hacer scroll.
+
+Para VP / Director:
+- Habla de eficiencia del equipo, reducción de fricción operativa y entrega de resultados.
+- Pueden tolerar un poco más de detalle técnico si es relevante.
+- Menciona cómo esto les hace quedar bien con su C-Level.
+
+Para Manager / Jefe de Área:
+- Habla de los problemas del día a día que ellos enfrentan directamente.
+- Son los más receptivos a casos de éxito detallados.
+- CTA puede ser una demo directa o una llamada técnica.
+
+---
+
+## MÉTRICAS DE REFERENCIA (LinkedIn Outreach 2024)
+
+- Tasa de apertura promedio (InMail): 57.5%
+- Tasa de respuesta promedio (mensajes genéricos): 1–3%
+- Tasa de respuesta con personalización real: 15–30%
+- Mejor horario para enviar: martes a jueves, entre 8–10 AM y 5–6 PM (hora local del prospecto)
+- Longitud óptima para mayor tasa de respuesta: 75–150 palabras
+
+---
+
+## FÓRMULAS DE VALOR PROBADAS
+
+### Fórmula PAS (Problema → Agitación → Solución):
+"[Empresa] está en un momento de [expansión/cambio]. Eso generalmente trae [problema específico].
+Hemos visto cómo eso impacta [área del prospecto] de maneras que no siempre son visibles hasta que ya es tarde.
+[Tu empresa] ha desarrollado un enfoque para [solución específica] que [resultado medible]."
+
+### Fórmula AIDA adaptada a LinkedIn (Atención → Interés → Deseo → Acción):
+"[Gancho con noticia o dato].
+[Por qué eso importa para SU empresa específicamente].
+[Cómo otras empresas similares lo están resolviendo con tu solución].
+[CTA de un solo paso]."
+
+### Fórmula de Insight Provocador:
+"La mayoría de [cargo] en [sector] cree que [creencia común].
+Los datos muestran algo diferente: [insight contraintuitivo].
+Eso es exactamente lo que estamos viendo en [empresa del prospecto] según [indicador público].
+¿Vale la pena 15 minutos para explorar eso?"

@@ -1,0 +1,86 @@
+# Estructuras VFE según Tamaño de Audiencia
+# LinkedIn VFE Architect — Base de Conocimientos Interna
+
+## REGLA MAESTRA DE SEGMENTACIÓN
+
+Si la audiencia es INDIVIDUAL (1 persona):
+- Usa hiper-personalización extrema.
+- Menciona un logro específico reciente del prospecto (ascenso, publicación, premio).
+- Estructura: Gancho personal → Conexión de valor → CTA de 1 pregunta.
+- Longitud ideal: 80–120 palabras.
+- Ejemplo de apertura: "Vi tu post sobre [tema específico] y cambió mi perspectiva sobre…"
+
+Si la audiencia es PEQUEÑA (menos de 50 personas):
+- Usa hiper-personalización con referencia a un post reciente o noticia de la empresa.
+- Demuestra que hiciste tarea: menciona un desafío específico del sector que ellos enfrentan.
+- Estructura: Gancho situacional → Prueba de relevancia → Propuesta de valor → CTA suave.
+- Longitud ideal: 100–150 palabras.
+
+Si la audiencia es MEDIANA (50 a 500 personas):
+- Usa un enfoque de "Desafío del Sector": presenta el problema que afecta a toda su industria.
+- Posiciónate como alguien con perspectiva externa valiosa.
+- Estructura: Dato o tendencia de mercado → Problema que genera → Tu solución → Caso de éxito breve → CTA.
+- Longitud ideal: 120–180 palabras.
+
+Si la audiencia es GRANDE (más de 500 personas):
+- Usa un enfoque de "Visión de Ecosistema": habla del futuro del sector, no del producto.
+- El prospecto es un líder de opinión; trátalos como tal.
+- Estructura: Tendencia macro → Implicación estratégica para su empresa → Insight diferenciador → CTA de alto valor (ej: invitación a evento, reporte exclusivo).
+- Longitud ideal: 150–200 palabras.
+
+---
+
+## COMPONENTES DE UN VFE EFECTIVO
+
+### 1. Gancho (Línea 1–2)
+El gancho es el 80% del éxito. Debe ser:
+- Específico (no genérico)
+- Relevante para SU realidad actual
+- Que genere curiosidad o reconocimiento inmediato
+
+Fórmulas probadas:
+- "[Empresa] acaba de [noticia reciente]. Eso cambia todo para [área del prospecto]."
+- "La mayoría de [cargo] en [sector] está subestimando [problema específico]."
+- "Vi que [empresa] está apostando por [iniciativa]. Tengo datos que pueden acelerarla."
+
+### 2. Cuerpo (Propuesta de Valor)
+- Nunca hables de tu empresa primero.
+- Habla del problema del prospecto usando sus propias palabras del sector.
+- La propuesta de valor debe ser específica y medible: "reducir X en Y%" mejor que "mejorar eficiencia".
+
+### 3. Prueba Social (Opcional pero poderoso)
+- Menciona una empresa similar (sin revelar datos confidenciales).
+- Usa números reales cuando sea posible.
+- Ejemplo: "Hemos ayudado a 3 empresas de retail en LATAM a reducir su tiempo de onboarding un 40%."
+
+### 4. CTA (Llamada a la Acción)
+- Una sola acción. Nunca dos.
+- Que sea fácil de decir sí: "¿15 minutos esta semana?" mejor que "¿Podríamos agendar una reunión de discovery?"
+- Para audiencias grandes: el CTA puede ser recibir un reporte, un benchmark, o asistir a un webinar.
+
+---
+
+## ERRORES FATALES A EVITAR
+
+1. Abrir con "Hola [nombre], espero que estés bien…" — eliminado automáticamente.
+2. Hablar de tu empresa en las primeras 3 líneas.
+3. Incluir más de un CTA.
+4. Usar términos de venta genéricos: "solución robusta", "líder del mercado", "innovador".
+5. Emails de más de 200 palabras para prospectos individuales.
+6. No personalizar el asunto del mensaje.
+
+---
+
+## PLANTILLAS DE ASUNTO PARA LINKEDIN InMail
+
+Para tono Ejecutivo:
+- "[Empresa] + [Tu empresa]: La oportunidad que el mercado aún no ve"
+- "Datos sobre [sector] que cambian la conversación"
+
+Para tono Empático:
+- "Sobre el desafío de [problema específico] en [empresa]"
+- "Una perspectiva diferente sobre lo que enfrenta [cargo] hoy"
+
+Para tono Persuasivo:
+- "Las 3 empresas de [sector] que ya lo están haciendo"
+- "El cambio que el 70% de [sector] aún no adoptó"
