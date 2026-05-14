@@ -1,7 +1,7 @@
 # ✉️ LinkedIn VFE Architect
 
 > Agente Conversacional con RAG + Web Search para generar Value Forward Emails de alta conversión en LinkedIn.
-> **Proyecto Final — Maestría en IA**
+> **Proyecto Final — Modulo 1
 
 ---
 
@@ -38,7 +38,7 @@
 ### 1. Clonar y preparar entorno
 
 ```bash
-git clone <tu-repo>
+git clone <https://github.com/snab92/linkedin-vfe-architect>
 cd linkedin-vfe-architect
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -55,7 +55,7 @@ GOOGLE_API_KEY = "tu_google_api_key_aqui"
 
 > Obtén tu API Key en: https://aistudio.google.com/app/apikey
 
-### 3. Agregar documentos al RAG (opcional pero recomendado)
+### 3. Agregar documentos al RAG
 
 ```
 data/
@@ -155,9 +155,9 @@ Gancho que funciona: "Con el crecimiento del D2C en LATAM, el...
 
 | Componente | Tecnología |
 |------------|------------|
-| LLM | Gemini 1.5 Flash |
-| Embeddings | Google Embedding-001 |
-| Vector Store | FAISS (CPU) |
+| LLM | Gemini 2.5 Flash |
+| Embeddings | HuggingFace Embeddings |
+| Vector Store | Chroma |
 | Agente | LangChain CONVERSATIONAL_REACT |
 | Memoria | ConversationBufferMemory |
 | Web Search | DuckDuckGo |
@@ -169,12 +169,12 @@ Gancho que funciona: "Con el crecimiento del D2C en LATAM, el...
 
 **Decisiones de arquitectura a destacar:**
 
-1. **FAISS sobre Chroma/Pinecone**: Elección deliberada para despliegue sin dependencias externas. Todo corre localmente o en Streamlit Cloud sin bases de datos adicionales.
+1. Chroma sobre FAISS/Pinecone: Elección deliberada por su persistencia automática y mejor integración con LangChain moderno. Todo corre localmente o en Streamlit Cloud sin bases de datos adicionales.
 
 2. **CONVERSATIONAL_REACT vs ReAct simple**: El tipo `CONVERSATIONAL_REACT_DESCRIPTION` mantiene memoria entre turnos, permitiendo refinamientos iterativos del VFE en la misma sesión.
 
 3. **Type hints + Docstrings Google**: Estándar de ingeniería de software para mantenibilidad y documentación automática.
 
-4. **`@st.cache_resource` en vectorstore**: El índice FAISS se construye una sola vez por sesión, evitando re-indexar en cada interacción del usuario.
+4. **`@st.cache_resource` en vectorstore**: El índice Chroma se construye una sola vez por sesión, evitando re-indexar en cada interacción del usuario.
 
 5. **Separación de herramientas**: RAG y Search son herramientas independientes que el agente combina según el contexto, demostrando razonamiento multi-paso real.
