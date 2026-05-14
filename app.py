@@ -36,7 +36,7 @@ st.set_page_config(
 # ──────────────────────────────────────────────────────────────────────────────
 try:
     from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
-    from langchain_community.vectorstores import FAISS
+    from langchain_community.vectorstores import Chroma
     from langchain_community.document_loaders import PyPDFLoader, TextLoader
     from langchain_community.tools import DuckDuckGoSearchRun
     from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -125,9 +125,9 @@ def load_documents(knowledge_dir: Path) -> list:
     return docs
 
 
-@st.cache_resource(show_spinner="🧠 Indexando base de conocimientos con FAISS…")
-def build_vectorstore(knowledge_dir: Path, api_key: str) -> Optional[FAISS]:
-    """Construye y cachea el vectorstore FAISS a partir de los documentos locales.
+@st.cache_resource(show_spinner="🧠 Indexando base de conocimientos con Chroma…")
+def build_vectorstore(knowledge_dir: Path, api_key: str) -> Optional[Chroma]:
+    """Construye y cachea el vectorstore Chroma a partir de los documentos locales.
 
     Args:
         knowledge_dir: Directorio con archivos de conocimiento.
@@ -162,7 +162,7 @@ def build_vectorstore(knowledge_dir: Path, api_key: str) -> Optional[FAISS]:
             model="models/embedding-001",
             google_api_key=api_key,
         )
-        vectorstore = FAISS.from_documents(chunks, embeddings)
+        vectorstore = Chroma.from_documents(chunks, embeddings)
         return vectorstore
     except Exception as exc:
         st.error(f"❌ Error al construir el índice FAISS: {exc}")
